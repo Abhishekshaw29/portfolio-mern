@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import '../About.css'
 import { UserContext } from '../App'
 
@@ -17,16 +17,13 @@ const About = () => {
             const res = await fetch("/about", {
                 method: "GET",
                 headers: {
-                    Accept: "application/json",
                     "Content-Type": "application/json"
                 },
-                credentials: "include"
 
             });
             dispatch({type:'USER',payload:true});
             const data = await res.json();
             setData(data);
-
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -44,7 +41,6 @@ const About = () => {
         callAboutPage();
 
     }, []);
-
     
     return (
         <>
