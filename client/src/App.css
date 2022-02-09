@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Luxurious+Roman&family=Satisfy&display=swap');
+.title-text{
+  font: bold;
+  font-size: 4em;
+  font-family: 'Luxurious Roman', cursive;
+}
+.title-small{
+  font: bold;
+  font-size: 2em;
+  font-family: 'Satisfy', cursive;
+}
+.title-medium{
+  font: bold;
+  font-size: 3em;
+  font-family:-apple-system;
+ 
+}
+.fonts{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#username{
+  font-size: 2rem;
+  font-style:italic;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.nav-link{
+  font: bold;
+}
+.logo{
+  height: 3rem;
+  width: auto;
+
+}
+.fab{
+  height: 2em;
+  width: 6em;
+  margin: 1rem;
+}
+.site-logo{
+  height: 4em;
+  width: auto;
+}
+main{
+ background:url('./images/body-bg.png');
+
+}
+.box{
+  width:auto;
+  padding: 10%;
+  margin: 10%;
+  background: url(./images/subscribe-bg.png);
+}
+@media only screen and (max-width: 600px) {
+  .title-text{
+    font: bold;
+    font-size: 3em;
+    font-family: 'Luxurious Roman', cursive;
+  }
+  .title-small{
+    font: bold;
+    font-size: 1em;
+    font-family: 'Satisfy', cursive;
+  }
+  .title-medium{
+    font: bold;
+    font-size: 2em;
+    font-family:-apple-system;
+   
+  }
+  .img-fluid{
+    width: 25em;
+    height: auto;
+  }
+  .fluid{
+    display: none;
+  }
+
+}
+.signup{
+  background-color:white;
+}
+.space{
+  height: 2rem;
+}
+.cards{
+  top: 2em;
+}
+/* --------------- */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:25rem;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px #e8e8e8;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.37);
+}
