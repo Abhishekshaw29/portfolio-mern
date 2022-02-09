@@ -84,13 +84,6 @@ router.post('/signin', async (req, res) => {
 
 });
 
-//about us page with middleware
-
-router.get("/about",authenticate, (req, res) => {
-    res.send(req.rootUser);
-    console.log("hello my about");
-});
-
 //logout
 
 router.get("/logout",(req, res) => {
@@ -100,8 +93,6 @@ router.get("/logout",(req, res) => {
     res.status(200).send("Logged out Succesfully ");
     console.log("hello my logout");
 });
-
-
 
 
 //getdata for homepage and contact page
