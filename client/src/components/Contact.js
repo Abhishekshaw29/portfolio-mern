@@ -9,7 +9,7 @@ const Contact = () => {
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const [messages, setMessages] = useState("");
-
+    const {state,dispatch} = useContext(UserContext);
 
     const calldataPage = async () => {
         try {
@@ -20,7 +20,7 @@ const Contact = () => {
                 },
 
             });
-
+            dispatch({type:'USER',payload:true});
             const data = await res.json();
             setData(data);
 
@@ -70,7 +70,8 @@ const Contact = () => {
 
 
 
-    const {state,dispatch} = useContext(UserContext);
+
+
     return (
         <>
             <div className="contact_info">

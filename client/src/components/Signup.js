@@ -17,6 +17,7 @@ const Signup = () => {
     cpassword: ""
 
   });
+  const {state,dispatch} = useContext(UserContext);
   const captureData = (e) => {
     const name = e.target.id;
     const value = e.target.value;
@@ -46,6 +47,7 @@ const Signup = () => {
     else {
       window.alert("Successfully Registered");
       console.log("Successfully Registered");
+      dispatch({type:'USER',payload:false});
       navigate("/login");
     }
 
@@ -53,7 +55,7 @@ const Signup = () => {
 
   };
 
-  const {state,dispatch} = useContext(UserContext);
+  
 
   return (
     <>

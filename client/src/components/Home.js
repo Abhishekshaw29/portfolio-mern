@@ -16,6 +16,7 @@ const Home = () => {
 
     const navigate = useNavigate();
     const [data, setData] = useState({});
+    const {state,dispatch} = useContext(UserContext);
 
     const calldataPage = async () => {
         try {
@@ -29,6 +30,7 @@ const Home = () => {
 
             const data = await res.json();
             setData(data);
+            dispatch({type:'USER',payload:true});
             document.getElementById('username').innerHTML = data.name;
 
             if (!res.status === 200) {
@@ -38,6 +40,7 @@ const Home = () => {
 
         } catch (error) {
             console.log(error);
+            dispatch({type:'USER',payload:false});
             window.alert("Please Login to continue");
         }
 
@@ -48,7 +51,7 @@ const Home = () => {
 
     }, []);
 
-    const {state,dispatch} = useContext(UserContext);
+    
 
     return (
         <>
