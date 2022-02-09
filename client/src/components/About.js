@@ -36,7 +36,6 @@ const About = () => {
         } catch (error) {
             console.log(error);
             navigate('/login');
-            dispatch({type:'USER',payload:false});
         }
 
     }
