@@ -7,9 +7,10 @@ import { useNavigate, NavLink } from 'react-router-dom'
 
 const About = () => {
     
-    const {state,dispatch} = useContext(UserContext);
+    
     const navigate = useNavigate();
     const [data, setData] = useState({});
+    const {state,dispatch} = useContext(UserContext);
 
     const callAboutPage = async () => {
         try {
@@ -22,8 +23,10 @@ const About = () => {
                 credentials: "include"
 
             });
+            dispatch({type:'USER',payload:true});
             const data = await res.json();
             setData(data);
+
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
