@@ -4,9 +4,9 @@ import '../App.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { UserContext } from '../App'
 
-const {state,dispatch} = useContext(UserContext);
+
 const Signup = () => {
-  
+ 
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
@@ -53,6 +53,7 @@ const Signup = () => {
 
   };
 
+  const {state,dispatch} = useContext(UserContext);
 
   return (
     <>

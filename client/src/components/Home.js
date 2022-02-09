@@ -10,7 +10,7 @@ import '../App.css'
 import { UserContext } from '../App'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-const {state,dispatch} = useContext(UserContext);
+
 const Home = () => {
     
 
@@ -48,6 +48,7 @@ const Home = () => {
 
     }, []);
 
+    const {state,dispatch} = useContext(UserContext);
 
     return (
         <>
