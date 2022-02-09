@@ -22,10 +22,9 @@ const About = () => {
                 credentials: "include"
 
             });
-            dispatch({type:'USER',payload:true});
             const data = await res.json();
             setData(data);
-
+            dispatch({type:'USER',payload:true});
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -35,6 +34,7 @@ const About = () => {
         } catch (error) {
             console.log(error);
             navigate('/login');
+            dispatch({type:'USER',payload:false});
         }
 
     }
