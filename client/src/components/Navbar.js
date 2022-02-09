@@ -4,11 +4,8 @@ import navimg from '../images/portfolio.png'
 import '../App.css'
 import { UserContext } from '../App'
 
-
 const {state,dispatch} = useContext(UserContext);
 const Navbar = () => {
-  const {state,dispatch} = useContext(UserContext);
-
   const RenderMenu = () =>{
     if(state){
       return(
