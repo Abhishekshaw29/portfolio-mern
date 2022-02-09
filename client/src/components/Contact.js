@@ -20,9 +20,11 @@ const Contact = () => {
                 },
 
             });
-            dispatch({type:'USER',payload:true});
             const data = await res.json();
-            setData(data);
+            if(data){
+                dispatch({type:'USER',payload:true});
+                setData(data);
+            }
 
             if (!res.status === 200) {
                 const error = new Error(res.error);

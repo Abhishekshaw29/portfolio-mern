@@ -27,8 +27,6 @@ const About = () => {
                 dispatch({type:'USER',payload:true});
                 setData(data);
             }
-           
-
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
