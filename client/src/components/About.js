@@ -4,10 +4,10 @@ import { UserContext } from '../App'
 
 import { useNavigate, NavLink } from 'react-router-dom'
 
-
+const {state,dispatch} = useContext(UserContext);
 const About = () => {
     
-const {state,dispatch} = useContext(UserContext);
+
     const navigate = useNavigate();
     const [data, setData] = useState({});
 

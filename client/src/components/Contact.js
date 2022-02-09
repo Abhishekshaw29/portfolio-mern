@@ -3,9 +3,10 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { UserContext } from '../App'
 import '../Contact.css'
 
+const {state,dispatch} = useContext(UserContext);
 
 const Contact = () => {
-    const {state,dispatch} = useContext(UserContext);
+
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const [messages, setMessages] = useState("");

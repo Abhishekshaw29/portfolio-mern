@@ -10,10 +10,10 @@ import '../App.css'
 import { UserContext } from '../App'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-
+const {state,dispatch} = useContext(UserContext);
 const Home = () => {
     
-const {state,dispatch} = useContext(UserContext);
+
     const navigate = useNavigate();
     const [data, setData] = useState({});
 
